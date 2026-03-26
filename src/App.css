@@ -1,0 +1,162 @@
+.updatesPage {
+  min-height: 100svh;
+  display: grid;
+  place-items: start center;
+  padding: 0;
+  background: #5f6774;
+}
+
+.updatesPanel {
+  width: 390px;
+  max-width: 100%;
+  min-height: 100svh;
+  background: linear-gradient(180deg, #4f5763 0%, #4c5460 100%);
+  color: #f5f5f5;
+  padding: 14px 14px 24px;
+  box-sizing: border-box;
+}
+
+.panelHeader {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0 12px;
+  background: linear-gradient(180deg, #4f5763 75%, rgba(79, 87, 99, 0));
+}
+
+.panelTitle {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.panelSub {
+  margin: 2px 0 0;
+  font-size: 10px;
+  opacity: 0.8;
+  text-align: center;
+}
+
+.headerTitleWrap {
+  margin: 0 auto;
+}
+
+.menuBtn {
+  position: absolute;
+  right: 0;
+  top: 8px;
+  width: 30px;
+  height: 30px;
+  border: none;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.16);
+  display: grid;
+  place-content: center;
+  gap: 3px;
+}
+
+.menuBtn span {
+  width: 12px;
+  height: 1.5px;
+  background: #fff;
+}
+
+.updatesScroll {
+  border-radius: 10px;
+  background: rgba(35, 42, 52, 0.34);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 12px 10px 20px;
+}
+
+.updateBlock {
+  padding-bottom: 16px;
+  margin-bottom: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.updateBlock:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.date {
+  margin: 0 0 8px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.bulletTitle {
+  margin: 0 0 10px;
+  font-size: 12px;
+  line-height: 1.4;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #8ae847;
+  box-shadow: 0 0 0 2px rgba(138, 232, 71, 0.2);
+}
+
+.updateBlock p {
+  margin: 0 0 8px;
+  font-size: 10px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.previewCard {
+  margin: 12px 0;
+  border-radius: 8px;
+  background: #565e6a;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.phonePreview {
+  border-radius: 6px;
+  overflow: hidden;
+  background: #222a33;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.phonePreview img {
+  width: 100%;
+  display: block;
+  height: 130px;
+  object-fit: cover;
+}
+
+.previewTime {
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+  padding: 6px 0 8px;
+  background: linear-gradient(180deg, rgba(58, 211, 116, 0.9), rgba(41, 181, 95, 0.95));
+}
+
+.ctaBtn {
+  display: block;
+  margin: 12px auto 0;
+  width: 176px;
+  height: 34px;
+  border: none;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #5b5a53;
+  background: #fff;
+}

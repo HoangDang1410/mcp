@@ -1,0 +1,12 @@
+body {
+  margin: 0;
+  font-family: 'Noto Sans JP', 'Noto Sans CJK JP', 'Hiragino Kaku Gothic ProN',
+    'Yu Gothic', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  width: 100%;
+  min-height: 100svh;
+}
