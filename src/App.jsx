@@ -1,80 +1,103 @@
 import './App.css'
 
 function App() {
-  const previewCat =
-    'https://www.figma.com/api/mcp/asset/8079bcc5-7152-4a1c-ba48-82b9c6099763'
-  const previewDog =
-    'https://www.figma.com/api/mcp/asset/8a45dee9-7a88-4afd-8ebe-87fcc92b1506'
+  const heroImage =
+    'https://www.figma.com/api/mcp/asset/af58e347-8998-46d9-8642-1bbeb4c4ef9e'
 
   return (
-    <main className="updatesPage">
-      <section className="updatesPanel" aria-label="追加・更新情報">
-        <header className="panelHeader">
-          <div className="headerTitleWrap">
-            <h1 className="panelTitle">追加・更新情報</h1>
-            <p className="panelSub">随時こちらに詳細を載せていきます</p>
-          </div>
-          <button type="button" className="menuBtn" aria-label="menu">
-            <span />
-            <span />
-            <span />
+    <main className="classPage">
+      <header className="topHeader">
+        <div className="topInfo">
+          <span>Email: youremail@gmail.com</span>
+          <span>Hotline: 0901234567</span>
+        </div>
+        <div className="brandRow">
+          <h1 className="brand">SoroTouch</h1>
+          <button type="button" className="trialBtn">
+            ĐĂNG KÝ TRẢI NGHIỆM
           </button>
-        </header>
+        </div>
+      </header>
 
-        <div className="updatesScroll">
-          <section className="updateBlock">
-            <p className="date">2025/7/11（金）</p>
-            <h2 className="bulletTitle">
-              <span className="dot" />
-              えがお博覧会｜判定動線追加
-            </h2>
-            <p>
-              開くと過去の判定履歴一覧が表示され、中央の「えがお判定」をタップでフォームが立ち上がります。軽めの内容なので一旦webのまま持ってきてます。
-            </p>
-            <p>
-              判定結果も同じウインドウ内で展開する想定ですが、情報量が多い場合は別画面表示にも対応できます。
-            </p>
-          </section>
+      <nav className="mainNav" aria-label="Điều hướng chính">
+        <a href="#intro">Giới thiệu</a>
+        <a href="#about">SoroTouch là gì</a>
+        <a href="#programs">Chương trình học</a>
+        <a href="#class">Lớp học</a>
+        <a href="#news">Tin tức</a>
+        <a href="#faq">Hỏi đáp</a>
+      </nav>
 
-          <section className="updateBlock">
-            <h2 className="bulletTitle">
-              <span className="dot" />
-              HOMEのペット背景について
-            </h2>
-            <p>
-              いつでも開けばペットのベストショットが見られるデザインを目指しました。写真アップロード時に自動フィルターを適用する予定です。
-            </p>
-
-            <div className="previewCard">
-              <article className="phonePreview">
-                <img src={previewCat} alt="cat preview" />
-                <div className="previewTime">11:00</div>
-              </article>
-              <article className="phonePreview">
-                <img src={previewDog} alt="dog preview" />
-                <div className="previewTime">11:00</div>
-              </article>
-            </div>
-
-            <p>
-              室内などで撮った薄暗い写真、上部に余白が少ない写真は見え方に影響が出るため、チュートリアルで案内を入れています。
-            </p>
-            <button type="button" className="ctaBtn">
-              背景画像登録の前に
-            </button>
-          </section>
-
-          <section className="updateBlock">
-            <h2 className="bulletTitle">
-              <span className="dot" />
-              animoの症状記録機能を更新
-            </h2>
-            <p>
-              症状記録機能を更新しました。HOME（自宅）アイコンから起動し、直感的に使える導線を意識してUIを再構成しています。
-            </p>
-          </section>
+      <section className="heroSection">
+        <img src={heroImage} alt="SoroTouch class hero" />
+        <div className="heroOverlay">
+          <h2>LỚP HỌC</h2>
+          <p>Trang chủ • Lớp học</p>
         </div>
       </section>
+
+      <section className="cardSection">
+        <article className="classCard">
+          <div className="thumb thumbOne" />
+          <div className="cardContent">
+            <h3>CƠ SỞ VẬT CHẤT</h3>
+            <button type="button">Xem thêm</button>
+          </div>
+        </article>
+
+        <article className="classCard">
+          <div className="thumb thumbTwo" />
+          <div className="cardContent">
+            <h3>CÁC TRUNG TÂM</h3>
+            <button type="button">Xem thêm</button>
+          </div>
+        </article>
+      </section>
+
+      <section className="contactStrip">
+        <article>
+          <h4>HOTLINE</h4>
+          <p>0901234567</p>
+        </article>
+        <article>
+          <h4>ĐỊA CHỈ</h4>
+          <p>315 Trường Chinh, Thanh Xuân, HN</p>
+        </article>
+        <article>
+          <h4>EMAIL</h4>
+          <p>youremail@gmail.com</p>
+        </article>
+      </section>
+
+      <footer className="siteFooter">
+        <article>
+          <h5>Về SoroTouch</h5>
+          <p>
+            SoroTouch là nơi giúp trẻ học, phát triển và rèn luyện kỹ năng theo cách
+            hiện đại.
+          </p>
+          <button type="button" className="trialBtn footerBtn">
+            ĐĂNG KÝ TRẢI NGHIỆM
+          </button>
+        </article>
+        <article>
+          <h5>Liên hệ với chúng tôi</h5>
+          <p>Tầng 8, Tòa Nhà TOYOTA</p>
+          <p>315 Trường Chinh, Thanh Xuân, Hà Nội</p>
+          <p>0901234567</p>
+          <p>youremail@gmail.com</p>
+        </article>
+        <article>
+          <h5>Quick link</h5>
+          <ul>
+            <li>SoroTouch là gì</li>
+            <li>Chương trình học</li>
+            <li>Lớp học</li>
+            <li>Tin tức</li>
+            <li>Hỏi đáp</li>
+          </ul>
+        </article>
+      </footer>
     </main>
   )
 }
