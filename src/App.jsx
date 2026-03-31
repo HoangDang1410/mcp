@@ -2,7 +2,8 @@ import './App.css'
 
 function App() {
   const heroImage =
-    'https://www.figma.com/api/mcp/asset/7ef1980e-a8ae-468a-9287-a6998d9e80ae'
+    'https://www.figma.com/api/mcp/asset/712de0cb-f9d2-43c6-b78a-89ac3d3bdc05'
+  const cards = Array.from({ length: 6 })
 
   return (
     <main className="renaiPage">
@@ -29,49 +30,45 @@ function App() {
         <img src={heroImage} alt="Renai project hero" />
       </section>
 
-      <section className="breadcrumb">Trang chủ / Dự án</section>
+      <section className="breadcrumb">Trang chủ / Giải pháp</section>
 
-      <section className="projectSection" id="projects">
-        <article className="featuredCard">
-          <div className="featuredThumb" />
-          <h2>Dự án lắp đặt Điều hòa trung tâm VRV tại Trường Cao Đẳng nghề</h2>
-          <p>
-            Điều hòa trung tâm VRV IV đạt được một chuẩn mực mới cho hiệu quả, vì nó
-            có tính năng cải tiến về hiệu suất và khả năng vận hành.
-          </p>
-          <button type="button">Xem chi tiết</button>
-        </article>
-
-        <div className="smallCards">
-          {Array.from({ length: 4 }).map((_, index) => (
-            <article className="smallCard" key={index}>
-              <div className={`smallThumb thumb${index + 1}`} />
-              <h3>Dự án lắp đặt Điều hòa trung tâm VRV tại Trường Cao Đẳng nghề</h3>
-              <p>Điều hòa trung tâm VRV IV đạt được một chuẩn mực mới cho hiệu quả.</p>
+      <section className="solutionBlock" id="solutions">
+        <h2>Giải pháp điều hòa không khí</h2>
+        <div className="solutionGrid">
+          {cards.map((_, index) => (
+            <article className="solutionCard" key={`air-${index}`}>
+              <div className={`solutionThumb thumb${(index % 3) + 1}`} />
+              <h3>Giải pháp điều hòa không khí cho khách sạn, nhà nghỉ</h3>
+              <p>Nên lắp loại điều hòa nào cho khách sạn để thể hiện được đẳng cấp.</p>
               <button type="button">Xem chi tiết</button>
             </article>
           ))}
         </div>
+        <div className="moreWrap">
+          <button type="button" className="moreBtn">
+            Xem thêm
+          </button>
+        </div>
       </section>
 
-      <section className="newsSection">
-        {Array.from({ length: 4 }).map((_, index) => (
-          <article className="newsItem" key={index}>
-            <div className={`newsThumb news${index + 1}`} />
-            <div>
-              <h4>5 giải pháp bảo đảm nguồn nước sạch và vệ sinh môi trường</h4>
-              <p>Nên lắp loại điều hòa nào cho khách sạn để thể hiện đẳng cấp.</p>
+      <section className="solutionBlock">
+        <h2>Giải pháp môi trường</h2>
+        <div className="solutionGrid">
+          {cards.map((_, index) => (
+            <article className="solutionCard" key={`env-${index}`}>
+              <div className={`solutionThumb thumb${(index % 3) + 1}`} />
+              <h3>5 giải pháp bảo đảm nguồn nước sạch và vệ sinh môi trường</h3>
+              <p>Nên lắp loại điều hòa nào cho khách sạn để thể hiện được đẳng cấp.</p>
               <button type="button">Xem chi tiết</button>
-            </div>
-          </article>
-        ))}
+            </article>
+          ))}
+        </div>
+        <div className="moreWrap">
+          <button type="button" className="moreBtn">
+            Xem thêm
+          </button>
+        </div>
       </section>
-
-      <div className="moreWrap">
-        <button type="button" className="moreBtn">
-          Xem thêm
-        </button>
-      </div>
 
       <footer className="siteFooter">
         <section>
