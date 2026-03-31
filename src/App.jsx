@@ -2,105 +2,68 @@ import './App.css'
 
 function App() {
   const heroImage =
-    'https://www.figma.com/api/mcp/asset/712de0cb-f9d2-43c6-b78a-89ac3d3bdc05'
-  const cards = Array.from({ length: 6 })
+    'https://www.figma.com/api/mcp/asset/535ecc14-2f78-4020-9257-a0a88e0346b3'
+  const logoImage =
+    'https://www.figma.com/api/mcp/asset/f008d7b4-ea89-4a96-94ba-b53cfc2bf787'
 
   return (
-    <main className="renaiPage">
-      <header className="siteHeader">
-        <div className="headerTop">
-          <div className="logoBlock">
-            <h1>Renai</h1>
-            <span>VIETNAM</span>
-          </div>
-          <p className="hotline">Hotline: 0123 456 789</p>
-        </div>
-        <nav className="mainNav" aria-label="Main menu">
-          <a href="#home">TRANG CHỦ</a>
-          <a href="#about">GIỚI THIỆU</a>
-          <a href="#products">SẢN PHẨM</a>
-          <a href="#projects">DỰ ÁN</a>
-          <a href="#solutions">GIẢI PHÁP</a>
-          <a href="#contact">LIÊN HỆ</a>
-          <input placeholder="Tìm kiếm sản phẩm" aria-label="Search" />
+    <main className="wedding404Page">
+      <header className="weddingHeader">
+        <nav className="weddingNav" aria-label="Main navigation">
+          <ul>
+            <li>HOME</li>
+            <li>ABOUT</li>
+            <li>SERVICES</li>
+          </ul>
+          <img src={logoImage} alt="Tessa Morgan logo" className="weddingLogo" />
+          <ul>
+            <li>PORTFOLIO</li>
+            <li>BLOG</li>
+            <li>CONTACT</li>
+          </ul>
         </nav>
       </header>
 
-      <section className="hero">
-        <img src={heroImage} alt="Renai project hero" />
+      <section className="weddingHero">
+        <img src={heroImage} alt="Wedding couple" />
       </section>
 
-      <section className="breadcrumb">Trang chủ / Giải pháp</section>
-
-      <section className="solutionBlock" id="solutions">
-        <h2>Giải pháp điều hòa không khí</h2>
-        <div className="solutionGrid">
-          {cards.map((_, index) => (
-            <article className="solutionCard" key={`air-${index}`}>
-              <div className={`solutionThumb thumb${(index % 3) + 1}`} />
-              <h3>Giải pháp điều hòa không khí cho khách sạn, nhà nghỉ</h3>
-              <p>Nên lắp loại điều hòa nào cho khách sạn để thể hiện được đẳng cấp.</p>
-              <button type="button">Xem chi tiết</button>
-            </article>
-          ))}
-        </div>
-        <div className="moreWrap">
-          <button type="button" className="moreBtn">
-            Xem thêm
-          </button>
-        </div>
+      <section className="weddingError">
+        <p className="errorLabel">ERROR</p>
+        <p className="errorCode">404</p>
+        <p className="errorText">
+          SORRY, THE PAGE YOU ARE LOOKING FOR DOESN&apos;T EXIST.
+        </p>
+        <button type="button" className="homeButton">
+          Home
+        </button>
       </section>
 
-      <section className="solutionBlock">
-        <h2>Giải pháp môi trường</h2>
-        <div className="solutionGrid">
-          {cards.map((_, index) => (
-            <article className="solutionCard" key={`env-${index}`}>
-              <div className={`solutionThumb thumb${(index % 3) + 1}`} />
-              <h3>5 giải pháp bảo đảm nguồn nước sạch và vệ sinh môi trường</h3>
-              <p>Nên lắp loại điều hòa nào cho khách sạn để thể hiện được đẳng cấp.</p>
-              <button type="button">Xem chi tiết</button>
-            </article>
-          ))}
-        </div>
-        <div className="moreWrap">
-          <button type="button" className="moreBtn">
-            Xem thêm
-          </button>
-        </div>
-      </section>
-
-      <footer className="siteFooter">
-        <section>
-          <h5>THÔNG TIN LIÊN HỆ</h5>
-          <h6>CÔNG TY CỔ PHẦN RENAI VIỆT NAM</h6>
+      <footer className="weddingFooter">
+        <nav aria-label="Footer navigation" className="footerNav">
           <ul>
-            <li>Trụ sở chính: Văn phòng 5 Nhà số TBT1-1T2 KĐT Trung Hòa</li>
-            <li>Văn phòng giao dịch: Tầng 4, Tòa nhà 34T</li>
-            <li>Kho hàng: Km 10+200 Đại lộ Thăng Long</li>
-            <li>1900 12 70 - 090 123 456</li>
-            <li>info@renai.vn</li>
+            <li>HOME</li>
+            <li>ABOUT</li>
+            <li>SERVICES</li>
           </ul>
-        </section>
-        <section>
-          <h5>CHÍNH SÁCH BÁN HÀNG</h5>
+          <img src={logoImage} alt="Tessa Morgan logo" className="footerLogo" />
           <ul>
-            <li>Bảng Báo Giá Lắp Đặt Điều Hòa</li>
-            <li>Chính Sách Đổi Trả Hàng</li>
-            <li>Chính Sách Bảo Trì, Bảo Hành</li>
-            <li>Chính Sách Vận Chuyển</li>
-            <li>Chính Sách Bảo Mật Thông Tin</li>
-            <li>Hướng Dẫn Trả Góp</li>
+            <li>PORTFOLIO</li>
+            <li>BLOG</li>
+            <li>CONTACT</li>
           </ul>
-        </section>
-        <section>
-          <h5>LIÊN KẾT MẠNG XÃ HỘI</h5>
-          <div className="socials">
-            <span>▶</span>
-            <span>f</span>
-            <span>Zalo</span>
-          </div>
-        </section>
+        </nav>
+        <p className="footerText">
+          Lorem ipsum dolor sit amet consectetur. Morbi volut tempus posuere viverra massa fames sed.
+          Dignissim urisus et ac egestas dignissim.
+        </p>
+        <div className="footerSocials">
+          <span>f</span>
+          <span>▶</span>
+          <span>YT</span>
+          <span>IG</span>
+        </div>
+        <p className="footerCopy">Copyright 2024 All Rights Reserved</p>
       </footer>
     </main>
   )
